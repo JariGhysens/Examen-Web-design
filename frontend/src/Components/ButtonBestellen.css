@@ -1,0 +1,13 @@
+.button-bestellen{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    outline: auto;
+    margin-top: 20px;
+    background-color: rgb(38, 80, 115);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+}

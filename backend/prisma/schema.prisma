@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Gebruiker {
+  id          Int        @id @default(autoincrement())
+  voornaam    String
+  achternaam  String
+  email       String     @unique
+  wachtwoord  String
+  tickets     Ticket[]
+}
+
+model Film {
+  id            Int          @id @default(autoincrement())
+  titel         String
+  genre         String     
+  speelduur     Int
+  beschrijving  String
+  releasedatum  DateTime
+  cast          String     
+  thumbnail     String
+  voorstellingen Voorstelling[]
+  tickets       Ticket[]
+}
+
+model Voorstelling {
+  id        Int         @id @default(autoincrement())
+  film      Film        @relation(fields: [filmId], references: [id])
+  filmId    Int
+  datum     DateTime
+  tijd      String
+  zaal      Zaal        @relation(fields: [zaalId], references: [id])
+  zaalId    Int
+  tickets   Ticket[]
+}
+
+model Ticket {
+  id             Int       @id @default(autoincrement())
+  film           Film      @relation(fields: [filmId], references: [id])
+  filmId         Int
+  gebruiker      Gebruiker @relation(fields: [gebruikerId], references: [id])
+  gebruikerId    Int
+  zitplaatsen    String
+  totalePrijs    Float
+  aankoopdatum   DateTime
+  voorstellingsDatum DateTime 
+  voorstelling   Voorstelling @relation(fields: [ticketsId], references: [id])
+  ticketsId      Int
+}
+
+model Zaal {
+  id             Int      @id @default(autoincrement())
+  naam           String
+  capaciteit     Int
+  schermType     String
+  voorstellingen Voorstelling[] 
+}

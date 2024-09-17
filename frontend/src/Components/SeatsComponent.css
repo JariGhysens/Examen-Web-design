@@ -1,0 +1,31 @@
+.seats-screen {
+  width: 40%;
+  float: left;
+  justify-content: left;
+  margin-right: 20px;
+}
+
+.selected-seats {
+  margin-top: 100px;
+  color: rgb(38, 80, 115);
+}
+
+.selected-seats h2 {
+  margin-bottom: 10px;
+}
+
+.date-button{
+  border: 3px solid rgb(38, 80, 115);
+   margin-right : 10px;
+   padding: 2px;
+   margin : 10px
+}
+.line{
+  border: 1px solid black;
+  margin-right : 10px;
+  padding: 2px;
+  margin : 27px;
+  background-color: black;
+}
+
+

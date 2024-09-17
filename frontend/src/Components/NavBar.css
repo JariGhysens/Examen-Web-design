@@ -1,0 +1,39 @@
+.Logo {
+    font-size: 30px;
+    float: inline-end;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .button-home {
+    outline: auto;
+    padding-top: 5px;
+    margin-left: 200px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  .button-profile{
+    color: white; 
+    outline: auto;
+    padding-top: 5px;
+    font-size: 15px;
+    padding-left: 5px;
+    
+    padding: 3px;
+    margin: 20px;
+  }
+  .button-login {
+    color: white; 
+    outline: auto;
+    padding-top: 5px;
+    font-size: 15px;
+    padding-left: 5px;
+    padding: 3px;
+    margin: 20px;
+  }
+  

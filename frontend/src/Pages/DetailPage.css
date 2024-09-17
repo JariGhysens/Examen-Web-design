@@ -1,0 +1,51 @@
+.mainScreen{
+  padding-left: 5%;
+}
+.detail-container{
+  width: 50%;
+  float: left;
+  margin-left: 5%;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+  }
+  
+  .movie-info {
+    margin-top: 0;
+    text-align: left;
+    width: 90%;
+    
+  } 
+  .seats-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(38, 80, 115);
+    margin-bottom: 10px;
+  }
+  
+  
+  .info-label {
+    font-size: 20px;
+    color: rgb(38, 80, 115);
+    margin-bottom: 10px;
+  }
+  
+  .cast-member, .genre, .plot-summary {
+    margin-bottom: 5px;
+  }
+
+  .movie-title{
+    color: rgb(38, 80, 115);
+    font-size: large;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 40px;
+  }
+
+
+  
